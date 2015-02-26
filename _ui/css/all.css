@@ -1,179 +1,113 @@
-/*	-----------------------------------------------
+/* -----------------------------------------------
 
-	Resets And Primitives
+  Resets And Primitives
 
-	----------------------------------------------- */
-
+  ----------------------------------------------- */
 
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {
-	padding:0;
-	margin:0;
+  padding:0;
+  margin:0;
 }
 
 body {
-	background:#fff;
-	font-size:62.5%;
-	font-family:Helvetica,Arial,sans-serif;
-	color:#000;
+  background:#fff;
+  font-size:62.5%;
+  font-family:Helvetica,Arial,sans-serif;
+  color:#000;
 }
 
 h1,h2,h3,h4,h5,h6 { font-weight:bold; }
 
-h1 { 
-	font-size:1em; 
-	line-height:1em;
+h1 {
+  font-size:1em;
+  line-height:1em;
 }
 
 h2 {
-	font-size:1em;
-	line-height:1em;
+  font-size:1em;
+  line-height:1em;
 }
 
-h3 { 
-	font-size:1em; 
-	line-height:1em;
+h3 {
+  font-size:1em;
+  line-height:1em;
 }
 
-h4 { 
-	font-size:1em; 
-	line-height:1em;
+h4 {
+  font-size:1em;
+  line-height:1em;
 }
 
 h5 {
-	font-size:1em; 
-	line-height:1em;
+  font-size:1em;
+  line-height:1em;
 }
 
 h6 {
-	font-size:1em; 
-	line-height:1em;
+  font-size:1em;
+  line-height:1em;
 }
 
-p { 
-	font-size:1em; 
-	line-height:1em;
+p {
+  font-size:1em;
+  line-height:1em;
 }
 
-address,caption,cite,code,dfn,th,var { 
-	font-style:normal; 
-	font-weight:normal; 
+address,caption,cite,code,dfn,th,var {
+  font-style:normal;
+  font-weight:normal;
 }
 
-ul,ol { 
-	list-style:none; 
+ul,ol {
+  list-style:none;
 }
 
-a { 
-	color:#000;
-	text-decoration:underline; 
+a {
+  color:#000;
+  text-decoration:underline;
 }
 
 a:hover {
 
 }
 
-img { 
-	border:0; 
+img {
+  border:0;
 }
 
-strong { 
-	font-weight:bold;
+strong {
+  font-weight:bold;
 }
 
 em {
-	font-style:italic; 
+  font-style:italic;
 }
 
 table {
-	border-collapse:collapse;
+  border-collapse:collapse;
 }
 
 caption,th,td {
-	text-align:left;
-	font-weight:normal;
+  text-align:left;
+  font-weight:normal;
 }
 
+/* -----------------------------------------------
 
-/*	-----------------------------------------------
+  Chrome
 
-	Custom Primitives
-
-	----------------------------------------------- */
-
-
-div.hr { 
-	height:1px;
-	border-top:1px solid #000;
-	overflow:hidden;
-	clear:both;
-}
-	div.hr hr {
-		display: none;
-	}
-
-div.clear {
-	clear:both;
-	height:1px;
-	overflow:hidden;	
-	margin-top:-1px;	
-}
-
-
-/*	-----------------------------------------------
-
-	Utility Classes
-
-	----------------------------------------------- */
-
-
-.left { float:left; }
-.right { float:right; }
-.invisible { display:none; }
-
-.offscreen { 
-	position:absolute;
-	left:-99999em; 
-}
-
-.clear:after {
-	content:".";
-	display:block;
-	clear: both;
-	height: 0px;
-	margin-top:-1px;
-	visibility: hidden;
-}
-
-
-/*	-----------------------------------------------
-
-	Chrome
-
-	----------------------------------------------- */
+  ----------------------------------------------- */
 
 img {
-	display:block;
-	position:absolute;
-	left:50%;
+  display:block;
+  position:absolute;
+  left:50%;
 }
 
-ul.slices {
-	overflow:hidden;
+.slices {
+  overflow:hidden;
 }
-	ul.slices li {
-		-webkit-transition:all 3s ease-out;
+
+	.slices li {
+		/*border: 1px solid grey;*/
 	}
-	
-/*	-----------------------------------------------
-
-	Widgets
-
-	----------------------------------------------- */
-
-
-
-/*	-----------------------------------------------
-
-	Page Specific Style
-
-	----------------------------------------------- */
