@@ -1,36 +1,49 @@
+const BLUR = true;
+const BLUR_MAX = 1;
+const SLICE_COUNT = 10;
+const SKEW_MAX = 10;
+const ROTATE_MAX = 2;
+
 var elImg = $('img');
 
-var elImgHeight = elImg.height();
-var elImgWidth = elImg.width();
+var imgHeight = elImg.height();
+var imgWidth = elImg.width();
 
-elImg.css({'margin-left': elImgWidth / -2});
+elImg.css({'margin-left': imgWidth / -2}); // Center image
 
-var elSlices = $('<ul class="slices"></ul>').css({width:elImgWidth, margin:'auto'});
-
-var sliceCount = 10;
-var sliceHeight = Math.floor(elImgHeight / sliceCount);
+var elSlices = $('<ul class="slices"></ul>').css({width: imgWidth, margin: 'auto'});
+var sliceHeight = Math.floor(imgHeight / SLICE_COUNT);
 
 $('body').append(elSlices);
 
-for(i=0; i<sliceCount; i++) {
+// Create slices: -------------------------------------------------------------
+
+for(i = 0; i < SLICE_COUNT; i++) {
   var elSlice = $('<li></li>');
 
-  var offset = Math.random() > 0.5 ? 0 : 1;
-
-  // SETUP SLICES
   elSlice.css({
-    height: sliceHeight, //+Math.random()*10
-    width: elImgWidth,
+    height: sliceHeight,
+    width: imgWidth,
     background: 'url(' + elImg[0].src + ') 0 -' + (i * sliceHeight) + 'px repeat-y'
   });
 
-  elSlices.append(elSlice);
+  // Jitter slices:
 
-  // FILTER
   var direction = Math.random() > 0.5 ? -1 : 1;
 
   elSlice.css({
-    'transform': 'skew(-' + Math.random() * 10 + 'deg) scale(' + (0.9 + Math.random() *0.2) + ') rotate(' + Math.random() * 2 * direction + 'deg)',
+    transform:
+      'skewX(-' + (direction * Math.random() * SKEW_MAX) + 'deg) ' +
+      'scale(' + (0.9 + Math.random() * 0.2) + ') ' +
+      'rotate(' + (direction * Math.random() * ROTATE_MAX) + 'deg)',
     opacity: Math.random()
   });
+
+  if (BLUR) {
+    elSlice.css({
+      '-webkit-filter': 'blur(' + Math.floor(Math.random() * BLUR_MAX) + 'px)'
+    });
+  }
+
+  elSlices.append(elSlice);
 }

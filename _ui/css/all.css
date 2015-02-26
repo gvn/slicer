@@ -7,6 +7,7 @@
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {
   padding:0;
   margin:0;
+  box-sizing: border-box;
 }
 
 body {
@@ -14,6 +15,7 @@ body {
   font-size:62.5%;
   font-family:Helvetica,Arial,sans-serif;
   color:#000;
+  margin: 20px;
 }
 
 h1,h2,h3,h4,h5,h6 { font-weight:bold; }
@@ -108,6 +110,6 @@ img {
   overflow:hidden;
 }
 
-	.slices li {
-		/*border: 1px solid grey;*/
-	}
+  .slices li {
+    /*border: 1px solid #666;*/
+  }
