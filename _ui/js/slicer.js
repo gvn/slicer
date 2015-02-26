@@ -30,7 +30,7 @@ for(i=0; i<sliceCount; i++) {
   var direction = Math.random() > 0.5 ? -1 : 1;
 
   elSlice.css({
-    '-webkit-transform': 'skew(-' + Math.random() * 10 + 'deg) scale(' + (0.9 + Math.random() *0.2) + ') rotate(' + Math.random() * 2 * direction + 'deg)',
+    'transform': 'skew(-' + Math.random() * 10 + 'deg) scale(' + (0.9 + Math.random() *0.2) + ') rotate(' + Math.random() * 2 * direction + 'deg)',
     opacity: Math.random()
   });
 }
