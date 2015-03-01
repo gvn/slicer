@@ -3,6 +3,8 @@ const BLUR_MAX = 1;
 const SLICE_COUNT = 10;
 const SKEW_MAX = 10;
 const ROTATE_MAX = 2;
+const ADD_BORDER = true;
+const BORDER_COLOR = 'pink';
 
 var elImg = $('img');
 
@@ -42,6 +44,12 @@ for(i = 0; i < SLICE_COUNT; i++) {
   if (BLUR) {
     elSlice.css({
       '-webkit-filter': 'blur(' + Math.floor(Math.random() * BLUR_MAX) + 'px)'
+    });
+  }
+
+  if (ADD_BORDER) {
+    elSlice.css({
+      'border': '1px solid ' + BORDER_COLOR
     });
   }
 
