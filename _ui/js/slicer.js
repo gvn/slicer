@@ -1,10 +1,12 @@
 const BLUR = true;
-const BLUR_MAX = 1;
-const SLICE_COUNT = 10;
+const BLUR_MAX = 2;
+const SLICE_COUNT = 5;
 const SKEW_MAX = 10;
 const ROTATE_MAX = 2;
-const ADD_BORDER = true;
+const ADD_BORDER = false;
 const BORDER_COLOR = 'pink';
+const ALLOW_REPEATS = true;
+const REPEAT_PROBABILITY = 0.2; // float: 0 (never) -> 1 (always)
 
 var elImg = $('img');
 
@@ -22,11 +24,16 @@ $('body').append(elSlices);
 
 for(i = 0; i < SLICE_COUNT; i++) {
   var elSlice = $('<li></li>');
+  var sliceToShow = i;
+
+  if (ALLOW_REPEATS) {
+    sliceToShow = Math.random() > REPEAT_PROBABILITY ? i : i - 1;
+  }
 
   elSlice.css({
     height: sliceHeight,
     width: imgWidth,
-    background: 'url(' + elImg[0].src + ') 0 -' + (i * sliceHeight) + 'px repeat-y'
+    background: 'url(' + elImg[0].src + ') 0 -' + (sliceToShow * sliceHeight) + 'px repeat-y'
   });
 
   // Jitter slices:
