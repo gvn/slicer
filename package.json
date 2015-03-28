@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/gvn/slicer",
   "dependencies": {
+    "node-static": "^0.7.6",
     "phantomjs": "^1.9.16"
   }
 }
