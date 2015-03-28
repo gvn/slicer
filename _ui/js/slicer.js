@@ -1,11 +1,11 @@
 const BLUR = true;
 const BLUR_MAX = 2;
-const SLICE_COUNT = 5;
+const SLICE_COUNT = 10;
 const SKEW_MAX = 10;
 const ROTATE_MAX = 2;
-const ADD_BORDER = false;
-const BORDER_COLOR = 'pink';
-const ALLOW_REPEATS = true;
+const ADD_BORDER = true;
+const BORDER_COLOR = 'rgba(69,69,69,0.2)';
+const ALLOW_REPEATS = false;
 const REPEAT_PROBABILITY = 0.2; // float: 0 (never) -> 1 (always)
 
 var elImg = $('img');
@@ -56,7 +56,8 @@ for(i = 0; i < SLICE_COUNT; i++) {
 
   if (ADD_BORDER) {
     elSlice.css({
-      'border': '1px solid ' + BORDER_COLOR
+      'border-top': '1px solid ' + BORDER_COLOR,
+      'border-bottom': '1px solid ' + BORDER_COLOR
     });
   }
 
