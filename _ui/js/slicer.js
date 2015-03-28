@@ -13,9 +13,7 @@ var elImg = $('img');
 var imgHeight = elImg.height();
 var imgWidth = elImg.width();
 
-elImg.css({'margin-left': imgWidth / -2}); // Center image
-
-var elSlices = $('<ul class="slices"></ul>').css({width: imgWidth, margin: 'auto'});
+var elSlices = $('<ul class="slices"></ul>').css({width: imgWidth});
 var sliceHeight = Math.floor(imgHeight / SLICE_COUNT);
 
 $('body').append(elSlices);
@@ -41,7 +39,7 @@ for(i = 0; i < SLICE_COUNT; i++) {
   var direction = Math.random() > 0.5 ? -1 : 1;
 
   elSlice.css({
-    transform:
+    '-webkit-transform':
       'skewX(-' + (direction * Math.random() * SKEW_MAX) + 'deg) ' +
       'scale(' + (0.9 + Math.random() * 0.2) + ') ' +
       'rotate(' + (direction * Math.random() * ROTATE_MAX) + 'deg)',

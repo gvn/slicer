@@ -1,3 +1,6 @@
 .DS_Store
 _ui/img/_gitignored/
 TODO.txt
+node_modules/
+npm-debug.log
+rendered/

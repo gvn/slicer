@@ -1,0 +1,23 @@
+{
+  "name": "slicer",
+  "version": "0.1.0",
+  "description": "Un Chien Andalou",
+  "main": "render.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "render": "phantomjs render.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gvn/slicer.git"
+  },
+  "author": "@gvn",
+  "license": "http://creativecommons.org/licenses/by-nc-sa/4.0/",
+  "bugs": {
+    "url": "https://github.com/gvn/slicer/issues"
+  },
+  "homepage": "https://github.com/gvn/slicer",
+  "dependencies": {
+    "phantomjs": "^1.9.16"
+  }
+}
